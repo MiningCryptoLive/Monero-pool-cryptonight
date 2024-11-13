@@ -1,6 +1,6 @@
-var api = "https://xmr.solopool.us";
+var api = "https://xmr.solopool.us/api";
 var poolHost = "xmr.solopool.us";
-let parentCoin = "XMR"
+let parentCoin = "monero"
 
 var email = "support@miningcryptolive@gmail.com";
 var telegram = "https://t.me/YourPool";
