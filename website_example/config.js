@@ -9,8 +9,8 @@ var discord = "https://discordapp.com/invite/YourPool";
 
 var marketCurrencies = ["{symbol}-BTC", "{symbol}-LTC", "{symbol}-DOGE", "{symbol}-USDT", "{symbol}-USD", "{symbol}-EUR", "{symbol}-CAD"];
 
-var blockchainExplorer = "https://blockchair.com/{symbol}/block/{id}";
-var transactionExplorer = "https://blockchair.com/{symbol}/transaction/{id}";
+var blockchainExplorer = "https://xmrscan.org/block/{id}";
+var transactionExplorer = "https://xmrscan.org/tx/{id}";
 
 
 var themeCss = "themes/default.css";
