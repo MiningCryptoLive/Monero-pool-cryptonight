@@ -27,7 +27,7 @@
 
     <!-- Navigation -->
     <div class="nav-side-menu">
-    <div class="brand"><a href="/"><span id="coinSymbol"></span> <span>XMR AnonymousMining Pool</span></a></div>
+    <div class="brand"><a href="/"><span>XMR Anonymous Mining Pool</span></a></div>
         <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
         <div class="menu-list">
             <ul id="menu-content" class="menu-content collapsed out">
@@ -74,9 +74,9 @@
     <!-- Top Bar -->
     <div id="top-bar">
         <div><span data-tkey="network">Network</span>: <strong><span id="g_networkHashrate"><span data-tkey="na">N/A</span></span></strong></div>
-        <div><span data-tkey="poolPplns">Prop Pool</span>: <strong><span id="poolHashrate"><span data-tkey="na">N/A</span></span></strong></div>
-        <div><span data-tkey="poolSolo">Solo Pool</span>: <strong><span id="poolHashrateSolo"><span data-tkey="na">N/A</span></span></strong></div>
-        <div><span data-tkey="you">You</span>: <strong><span id="userHashrate"><span tkey="na">N/A</span></span></strong></div>
+        <div><span data-tkey="poolProp">Prop Pool</span>: <strong><span id="g_poolHashrate"><span data-tkey="na">N/A</span></span></strong></div><br>
+        <div><span data-tkey="poolSolo">Solo Pool</span>: <strong><span id="g_poolHashrateSolo"><span data-tkey="na">N/A</span></span></strong></div>
+        <div><span data-tkey="you">You</span>: <strong><span id="g_userHashrate"><span tkey="na">N/A</span></span></strong></div>
         <div><span id="statsUpdated"><span data-tkey="statsUpdated">Stats Updated</span> &nbsp;</span></div>
         <div id="langSelector"></div>
     </div>
@@ -168,10 +168,10 @@ function updateLiveStats(data, key) {
 function updateIndex(){
     updateText('coinSymbol', lastStats.config.symbol);
     updateText('g_networkHashrate', getReadableHashRateString(lastStats.network.difficulty / lastStats.config.coinDifficultyTarget) + '/sec');
-    updateText('g_poolHashrate', getReadableHashRateString(lastStats.pool.hashrate) + '/sec');
-    updateText('g_poolHashrateSolo', getReadableHashRateString(lastStats.pool.hashrateSolo) + '/sec');
+    updateText('g_poolHashrate', getReadableHashRateString(lastStats.pool.Hashrate) + '/sec');
+    updateText('g_poolHashrateSolo', getReadableHashRateString(lastStats.pool.HashrateSolo) + '/sec');
     if (lastStats.miner && lastStats.miner.hashrate){
-         updateText('g_userHashrate', getReadableHashRateString(lastStats.miner.hashrate) + '/sec');
+         updateText('g_userHashrate', getReadableHashRateString(lastStats.miner.Hashrate) + '/sec');
     }
     else{
         updateText('g_userHashrate', 'N/A');
